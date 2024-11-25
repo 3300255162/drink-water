@@ -1,38 +1,178 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  background: linear-gradient(135deg, #1a1f25 0%, #2d3748 100%);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  color: white;
+}
+
+.level-badge {
+  background: linear-gradient(135deg, #61dafb 0%, #2c5282 100%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 0 4px 15px rgba(97, 218, 251, 0.3);
 }
 
-.App-link {
+.level-number {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.level-text {
+  font-size: 14px;
+  margin-top: -5px;
+}
+
+.exp-info {
+  flex: 1;
+}
+
+.exp-info h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.exp-bar {
+  background: rgba(0, 0, 0, 0.3);
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+.exp-progress {
+  background: linear-gradient(90deg, #61dafb 0%, #2c5282 100%);
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.exp-text {
+  font-size: 14px;
+  color: #a0aec0;
+  margin: 5px 0 0 0;
+}
+
+.water-tracker {
+  color: white;
+  text-align: center;
+}
+
+.water-tracker h2 {
+  margin: 0 0 30px 0;
+  color: #61dafb;
+  font-size: 24px;
+}
+
+.progress-circle {
+  width: 150px;
+  height: 150px;
+  background: rgba(97, 218, 251, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #61dafb;
+}
+
+.progress-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #61dafb;
+}
+
+.progress-label {
+  font-size: 16px;
+  color: #a0aec0;
+  margin-top: 5px;
+}
+
+.water-cups {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.water-cup {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.water-cup.filled {
+  opacity: 1;
+  transform: scale(1.1);
+  background: rgba(97, 218, 251, 0.2);
+  box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
+}
+
+.water-cup:hover {
+  transform: scale(1.1);
+  background: rgba(97, 218, 251, 0.1);
+}
+
+.motivation-text {
+  color: #a0aec0;
+  font-size: 16px;
+  margin: 20px 0 0 0;
+}
+
+@media (max-width: 480px) {
+  .user-stats {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .water-cup {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .progress-circle {
+    width: 120px;
+    height: 120px;
   }
 }
