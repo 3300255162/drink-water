@@ -43,10 +43,8 @@ function App() {
       setWaterCount(newCount);
       localStorage.setItem('waterCount', newCount);
       
-      addExp(5);
-      
       if (newCount === 8) {
-        addExp(10);
+        addExp(50);
       }
     }
   };
