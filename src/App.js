@@ -7,11 +7,13 @@ function App() {
   const [exp, setExp] = useState(0);
   
   useEffect(() => {
-    const today = new Date().toDateString();
+    const now = new Date();
+    const today = now.toLocaleDateString();
     const savedDate = localStorage.getItem('lastWaterDate');
     
     if (savedDate !== today) {
       setWaterCount(0);
+      localStorage.setItem('waterCount', '0');
       localStorage.setItem('lastWaterDate', today);
     } else {
       const savedCount = localStorage.getItem('waterCount');
