@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/drink-water/static/css/main.1b04dee8.css",
-    "main.js": "/drink-water/static/js/main.08ba9f9e.js",
+    "main.css": "/drink-water/static/css/main.d759bc38.css",
+    "main.js": "/drink-water/static/js/main.6ef3cd1b.js",
     "index.html": "/drink-water/index.html",
-    "main.1b04dee8.css.map": "/drink-water/static/css/main.1b04dee8.css.map",
-    "main.08ba9f9e.js.map": "/drink-water/static/js/main.08ba9f9e.js.map"
+    "main.d759bc38.css.map": "/drink-water/static/css/main.d759bc38.css.map",
+    "main.6ef3cd1b.js.map": "/drink-water/static/js/main.6ef3cd1b.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b04dee8.css",
-    "static/js/main.08ba9f9e.js"
+    "static/css/main.d759bc38.css",
+    "static/js/main.6ef3cd1b.js"
   ]
 }
