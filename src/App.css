@@ -192,3 +192,37 @@
 .reset-button:hover {
   background-color: #ff6b81;
 }
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.reset-button, .reset-all-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button {
+  background-color: #ff4757;
+  color: white;
+}
+
+.reset-all-button {
+  background-color: #2f3542;
+  color: white;
+}
+
+.reset-button:hover {
+  background-color: #ff6b81;
+}
+
+.reset-all-button:hover {
+  background-color: #3d3d3d;
+}

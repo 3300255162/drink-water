@@ -63,6 +63,18 @@ function App() {
     localStorage.setItem('waterCount', '0');
   };
 
+  const resetAll = () => {
+    setWaterCount(0);
+    setLevel(1);
+    setExp(0);
+    
+    localStorage.setItem('waterCount', '0');
+    localStorage.setItem('level', '1');
+    localStorage.setItem('exp', '0');
+    
+    alert('所有数据已重置！');
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -106,12 +118,21 @@ function App() {
               : `还差 ${8 - waterCount} 杯就完成今天的目标啦！`}
           </p>
           
-          <button 
-            className="reset-button" 
-            onClick={resetWater}
-          >
-            重置今日进度
-          </button>
+          <div className="button-group">
+            <button 
+              className="reset-button" 
+              onClick={resetWater}
+            >
+              重置今日进度
+            </button>
+            
+            <button 
+              className="reset-all-button" 
+              onClick={resetAll}
+            >
+              重置所有数据
+            </button>
+          </div>
         </div>
       </div>
     </div>
