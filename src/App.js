@@ -64,15 +64,19 @@ function App() {
   };
 
   const resetAll = () => {
-    setWaterCount(0);
-    setLevel(1);
-    setExp(0);
+    const isConfirmed = window.confirm('确定要重置所有数据吗？这将会清除你的等级和经验值！');
     
-    localStorage.setItem('waterCount', '0');
-    localStorage.setItem('level', '1');
-    localStorage.setItem('exp', '0');
-    
-    alert('所有数据已重置！');
+    if (isConfirmed) {
+      setWaterCount(0);
+      setLevel(1);
+      setExp(0);
+      
+      localStorage.setItem('waterCount', '0');
+      localStorage.setItem('level', '1');
+      localStorage.setItem('exp', '0');
+      
+      alert('所有数据已重置成功！');
+    }
   };
 
   return (
