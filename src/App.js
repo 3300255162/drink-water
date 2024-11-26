@@ -7,6 +7,11 @@ function App() {
   const [exp, setExp] = useState(0);
   
   useEffect(() => {
+    const savedLevel = localStorage.getItem('level');
+    const savedExp = localStorage.getItem('exp');
+    if (savedLevel) setLevel(parseInt(savedLevel));
+    if (savedExp) setExp(parseInt(savedExp));
+
     const now = new Date();
     const today = now.toLocaleDateString();
     const savedDate = localStorage.getItem('lastWaterDate');
@@ -30,10 +35,14 @@ function App() {
     const expNeeded = getExpNeeded(level);
     
     if (newExp >= expNeeded) {
-      setLevel(level + 1);
+      const newLevel = level + 1;
+      setLevel(newLevel);
       setExp(newExp - expNeeded);
+      localStorage.setItem('level', newLevel.toString());
+      localStorage.setItem('exp', (newExp - expNeeded).toString());
     } else {
       setExp(newExp);
+      localStorage.setItem('exp', newExp.toString());
     }
   };
 
