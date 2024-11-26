@@ -49,6 +49,11 @@ function App() {
     }
   };
 
+  const resetWater = () => {
+    setWaterCount(0);
+    localStorage.setItem('waterCount', '0');
+  };
+
   return (
     <div className="App">
       <div className="container">
@@ -91,6 +96,13 @@ function App() {
               ? "太棒了！今天的目标已完成 🎉" 
               : `还差 ${8 - waterCount} 杯就完成今天的目标啦！`}
           </p>
+          
+          <button 
+            className="reset-button" 
+            onClick={resetWater}
+          >
+            重置今日进度
+          </button>
         </div>
       </div>
     </div>

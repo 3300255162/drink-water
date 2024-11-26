@@ -176,3 +176,19 @@
     height: 120px;
   }
 }
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: #ff6b81;
+}
