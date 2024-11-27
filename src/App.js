@@ -58,11 +58,6 @@ function App() {
     }
   };
 
-  const resetWater = () => {
-    setWaterCount(0);
-    localStorage.setItem('waterCount', '0');
-  };
-
   const resetAll = () => {
     const isConfirmed = window.confirm('确定要重置所有数据吗？这将会清除你的等级和经验值！');
     
@@ -123,13 +118,6 @@ function App() {
           </p>
           
           <div className="button-group">
-            <button 
-              className="reset-button" 
-              onClick={resetWater}
-            >
-              重置今日进度
-            </button>
-            
             <button 
               className="reset-all-button" 
               onClick={resetAll}
