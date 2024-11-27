@@ -214,3 +214,36 @@
     padding: 10px 20px;
   }
 }
+
+.quote-card {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.quote-text {
+  font-size: 16px;
+  color: #61dafb;
+  margin: 0 0 10px 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #a0aec0;
+  margin: 0;
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .quote-text {
+    font-size: 14px;
+  }
+  
+  .quote-author {
+    font-size: 12px;
+  }
+}
